@@ -1,0 +1,15 @@
+<h1>Login!</h1>
+
+<div class = "container">
+    <div calss = "alert alert-warning" style="color:red" *ngIf="invalidLogin">{{errorMessage}}
+      for <div >{{userName}} </div>
+    </div>
+
+<div>
+userName : <input type = "text" name = "username" [(ngModel)] = "userName"/>  
+<!-- [{bananaInBox}] -->
+password : <input type = "password" name = "password" [(ngModel)] = "password"/>
+
+<button (click) = handleLogin() class = "btn btn-success">Login</button>
+</div>
+</div>

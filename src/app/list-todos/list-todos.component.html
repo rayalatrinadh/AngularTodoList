@@ -1,0 +1,35 @@
+<!-- <p>list-todos works!</p> -->
+<h1>My Todo's </h1>
+
+<div class = "container">
+<!-- created a basic table like and displays the data which is coming from list-todos.component.ts -->
+<table class = "table">
+    
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Target Date</th>
+            <th>isCompleted?</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <!-- similar to java for each loop -->
+        <!-- for(Todo getTodo : todos) -->
+        <tr *ngFor="let getTodo of todos">
+            <td>{{getTodo.description}}</td>
+            <td>{{getTodo.targetDate | date}}</td>
+            <td>{{getTodo.done}}</td>
+
+        </tr>
+
+
+    </tbody>
+
+
+
+</table>
+
+<!-- <button (click)=goHome()>Home</button> -->
+
+</div>
