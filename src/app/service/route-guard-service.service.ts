@@ -20,7 +20,7 @@ export class RouteGuardServiceService implements CanActivate {
         if (this.hardcodedAuthenticationService.isUserLoggedIn())
             return true;
         
-        this.router.navigate(['login']);  // route to the login page instead of blank page 
+        this.router.navigate(['login']);  // route to the login page instead of blank page
         return false;
     }
 

@@ -4,13 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HardcodedAuthenticationService {
-
   
- 
   constructor() { }
 
   authenticate(username: String,password : String)
   {
+    
     console.log('before ' + this.isUserLoggedIn());
     if(username == "trinadh" && password == "test"){
       
