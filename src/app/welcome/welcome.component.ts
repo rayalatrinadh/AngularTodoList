@@ -62,10 +62,12 @@ export class WelcomeComponent implements OnInit{
 
   handleSuccessfulResponse(response : any){
     this.showWelcomeMessageFromService = true;
+    console.log("in welcome.component.ts file -> handleSuccessfulResponse method ");
     this.welcomeMessageFromService = response.message;
   }
 
   handleErrorResponse(error : any){
+    console.log("in welcome.component.ts file -> handleErrorResponse method ");
     this.showWelcomeMessageFromService = true;
     this.welcomeMessageFromService =error.error.message;
     

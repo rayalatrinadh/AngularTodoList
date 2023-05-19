@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ErrorComponent {
 
-  errorMessage ="oops..! something wrong pelase get contact support"
+  errorMessage ="oops..! something wrong pelase get contact Trinadh (3nadhmail@gmail.com)"
 
 }
