@@ -32,7 +32,7 @@ export class WelcomeComponent implements OnInit{
   }
 
   // ngOnInit():void{}
-  ngOnInit() {  
+  ngOnInit() {
     console.log(this.message);
      this.name =  this.route1.snapshot.params['name']
     console.log(this.route1.snapshot.params['name']);
@@ -41,7 +41,9 @@ export class WelcomeComponent implements OnInit{
 
 
   getWelcomeMessage(){
-   console.log(this.service.executeHelloWorldBeanService());
+   console.log("log in app.module.ts");
+    console.log(this.service.executeHelloWorldBeanService());
+    console.log("above this.service.executeHelloWorldBeanService()");
    console.log("message from subscribe which is asynchronous : ");
    this.service.executeHelloWorldBeanService().subscribe(
     response => this.handleSuccessfulResponse(response),
@@ -53,7 +55,7 @@ export class WelcomeComponent implements OnInit{
   }
 
   getWelcomeMessageWithParam(){
-    console.log("getWelcomeMessageWithParam() Called");
+    console.log("getWelcomeMessageWithParam() Calling in welcome.component.ts service");
     this.service.executeHelloWorldBeanServiceWithParam(this.name).subscribe(
       responseWithParam => this.handleSuccessfulResponseWithParam(responseWithParam)
     )
@@ -87,7 +89,7 @@ export class WelcomeComponent implements OnInit{
 //if you want, u can create n number of classes 
 export class Test1{
 
-  constructor(public message:  String){
+  constructor(public message1:  String){
   }
 
 }

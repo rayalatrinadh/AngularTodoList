@@ -17,7 +17,7 @@ export class WelcomeDataService {
   }
 
   executeHelloWorldBeanServiceWithParam(name : String){
-    console.log("http://localhost:8080/hello-world-bean/trinadh")
     return this.http.get<Test1>(`http://localhost:8080/hello-world-bean/${name}`);
+    
    }
 }

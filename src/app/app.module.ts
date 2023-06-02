@@ -30,7 +30,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule, //added by trinadh
     FormsModule,
-    HttpClientModule //added by trinadh
+    HttpClientModule //added by trinadh every module need to import here app.module.ts
   ],
   providers: [],
   bootstrap: [AppComponent]
