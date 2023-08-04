@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RouteGuardServiceService } from './service/route-guard-service.service';
+import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
   //need to add path for every component to navigate to the required component
@@ -14,6 +15,8 @@ const routes: Routes = [
   {path : 'welcome/:name', component : WelcomeComponent, canActivate:[RouteGuardServiceService]},  //passing params welcome/:name
   {path : 'todos', component : ListTodosComponent, canActivate:[RouteGuardServiceService]},
   {path: 'logout', component : LogoutComponent, canActivate:[RouteGuardServiceService]},
+  {path: 'update/:id', component : TodoComponent, canActivate:[RouteGuardServiceService]},
+
 
 
   {path: '**', component : ErrorComponent} //note by trinadh : error path should be at  ** last** 

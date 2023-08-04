@@ -1,15 +1,19 @@
 <!-- <p>list-todos works!</p> -->
 <h1>My Todo's </h1>
-
+<div calss = "alert alert-success" style="color:rgb(0, 255, 119)" *ngIf="message">{{message}}</div>
 <div class = "container">
+
 <!-- created a basic table like and displays the data which is coming from list-todos.component.ts -->
 <table class = "table">
     
     <thead>
         <tr>
+            <th>userName</th>
             <th>Description</th>
             <th>Target Date</th>
             <th>isCompleted?</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
 
     </thead>
@@ -17,19 +21,19 @@
         <!-- similar to java for each loop -->
         <!-- for(Todo getTodo : todos) -->
         <tr *ngFor="let getTodo of todos">
+            <td>{{getTodo.userName}}</td>
             <td>{{getTodo.description}}</td>
-            <td>{{getTodo.targetDate | date}}</td>
-            <td>{{getTodo.done}}</td>
+            <td>{{getTodo.date}}</td>
+            <td>{{getTodo.status}}</td>
+            <td><button (click)="updateTodo(getTodo.id)" class = "btn btn-success">Update</button></td>
+
+            <!-- <td>{{getTodo.delete}}</td> -->
+            <td><button (click)="deleteTodo(getTodo.id)" class = "btn btn-warning">Delete</button></td>
 
         </tr>
-
-
     </tbody>
-
-
-
 </table>
-
 <!-- <button (click)=goHome()>Home</button> -->
 
 </div>
+    	

@@ -13,11 +13,11 @@ export class WelcomeDataService {
   ) { }
 
   executeHelloWorldBeanService(){
-   return this.http.get<Test1>('http://localhost:8080/hello-world-bean');
+    //alert('hello its alerting on click button');
+   return this.http.get<Test1>('http://localhost:8080/hello-world-nikhil');
   }
 
   executeHelloWorldBeanServiceWithParam(name : String){
     return this.http.get<Test1>(`http://localhost:8080/hello-world-bean/${name}`);
-    
    }
 }

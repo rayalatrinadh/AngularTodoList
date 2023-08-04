@@ -41,8 +41,8 @@ export class WelcomeComponent implements OnInit{
 
 
   getWelcomeMessage(){
-   console.log("log in app.module.ts");
-    console.log(this.service.executeHelloWorldBeanService());
+   console.log("i am in welcome.component.ts");
+    //console.log(this.service.executeHelloWorldBeanService());
     console.log("above this.service.executeHelloWorldBeanService()");
    console.log("message from subscribe which is asynchronous : ");
    this.service.executeHelloWorldBeanService().subscribe(
@@ -51,7 +51,6 @@ export class WelcomeComponent implements OnInit{
    );
     
 
-   console.log('last line ');
   }
 
   getWelcomeMessageWithParam(){
@@ -63,25 +62,28 @@ export class WelcomeComponent implements OnInit{
 
 
   handleSuccessfulResponse(response : any){
+    console.log('responseLog : ' + response);
     this.showWelcomeMessageFromService = true;
     console.log("in welcome.component.ts file -> handleSuccessfulResponse method ");
     this.welcomeMessageFromService = response.message;
+    console.log('welcomeMessageFromService : ' + this.welcomeMessageFromService);
   }
 
   handleErrorResponse(error : any){
     console.log("in welcome.component.ts file -> handleErrorResponse method ");
     this.showWelcomeMessageFromService = true;
-    this.welcomeMessageFromService =error.error.message;
+    console.log('error : ' + JSON.stringify(error));
+    this.welcomeMessageFromService ="error.error.message";
     
   }
 
   handleSuccessfulResponseWithParam(responseWithParam : any){
+    console.log(responseWithParam +  "responseWithParamComment");
        this.showWelcomeMessageFromService = true;
        this.welcomeMessageFromService = responseWithParam.message;
 
       console.log("response with param : "+responseWithParam);
   }
-
 }
 
 
@@ -91,7 +93,7 @@ export class Test1{
 
   constructor(public message1:  String){
   }
-
+ 
 }
 
 export class Test2{
